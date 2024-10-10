@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+
+ {% block content %}
+ <main>
+    <form method="post" action="{% url 'submitform' %}" class="col-6 mx-auto card p-3 shadow-lg">
+       {% csrf_token %}
+       {{form}}
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Output</label>
+            <input type="text" value="{{output}}" class="form-control" id="exampleInputPassword1">
+          </div>
+      </form>
+
+</main>
+ {% endblock %}

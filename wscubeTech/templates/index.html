@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+<!-- {% include "header.html" %} -->
+
+ {% block content %}
+    <main>
+      <h1>{{text}}</h1>
+      <!-- print list data -->
+
+      {% for n in mylist %}
+      
+      <div>{{forloop.counter}}. {{n}}</div>
+      <!-- <div>{{forloop.revcounter}}. {{n}}</div>
+      <div>{{forloop.revcounter0}}. {{n}}</div>
+      <div>{{forloop.counter0}}. {{n}}</div> -->
+
+      {% endfor %}
+    
+
+      <!-- print dictionary data -->
+       <table border="1" cellpadding="10">
+         <th>Name</th>
+         <th>Phone_Number</th>
+      
+       {% for d in student_details %}
+       <tr>
+        <td>{{d.name}}</td>
+        <td>{{d.phone_number}}</td>
+      </tr>
+       {% endfor %}
+
+    </table>
+
+    
+   {% if number|length > 0%}
+
+     {% for num in number %}
+         {% if num >= 30 %}
+            <p>{{num}}</p>
+        {% endif %}   
+     {% endfor %}
+
+   {% else %}
+      No Data Found
+   
+   {% endif %}
+</main>
+
+   <!-- {% include "footer.html" %} -->
+    
+Userform Output is {{output}}
+
+{% endblock %}
+
+
+</body>
+</html>
+

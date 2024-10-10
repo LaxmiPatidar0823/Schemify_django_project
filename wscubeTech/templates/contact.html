@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+
+ {% block content %}
+ <main>
+    <h1 style="text-align: center;">Contact Us </h1>
+    <marquee style="height: 30px; background-color: aliceblue;color:black ;"  onmousemove="stop()"  onmouseout="start()">
+        {% for a in newsData %} 
+       <a href="/news/{{a.id}}" style="text-decoration: none; color: black;text-decoration:none; font-weight: bold;">
+         {{a.news_title}} 
+         </a>
+         {% endfor %}
+    </marquee>
+    <p style="margin-left: 100px; margin-right: 100px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat tempora dolorum voluptas quia minus esse assumenda fuga, cumque blanditiis tenetur laborum possimus aliquam veritatis autem. Temporibus dolorem facere laudantium unde inventore. Aut non, eius saepe nisi ipsa veniam adipisci est quibusdam quas expedita error placeat reprehenderit accusantium doloremque, iste hic. Vel voluptate repudiandae ullam neque eveniet nemo corrupti repellat impedit. Itaque, dicta neque? Asperiores cum quod tempore veniam est officiis temporibus, iure recusandae repellendus cumque illo ipsam nobis eveniet omnis ipsum optio praesentium, incidunt culpa reprehenderit rerum placeat alias beatae ducimus nemo. Perferendis esse odit voluptatum dolore? Quasi, cum laboriosam?</p>
+    <img src="{% static 'contactUs.png' %}" alt="image" style="margin-left: 550px;">
+
+</main>
+{% endblock %}

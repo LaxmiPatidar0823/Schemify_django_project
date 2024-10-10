@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+
+ {% block content %}
+ <main style="height: 800px;">
+    <form method="post"  class="col-6 mx-auto card p-3 shadow-lg">
+       {% csrf_token %}
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">subject 1</label>
+          <input type="text" name="subject1" value="{{n}}" class="form-control" >
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">subject 2</label>
+          <input type="text" name="subject2" value="{{n}}" class="form-control" >
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">subject 3</label>
+          <input type="text" name="subject3" value="{{n}}" class="form-control" >
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">subject 4</label>
+          <input type="text" name="subject4" value="{{n}}" class="form-control" >
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">subject 5</label>
+          <input type="text" name="subject5" value="{{n}}" class="form-control" >
+        </div>
+       
+        <button type="submit" class="btn btn-primary">Marksheet</button>
+
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Total</label>
+            <input type="text" value="{{total}}" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Percentage</label>
+            <input type="text" value="{{percentage}}" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Division</label>
+            <input type="text" value="{{Division}}" class="form-control">
+        </div>
+    </form>
+
+</main>
+ {% endblock %}

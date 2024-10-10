@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load static %}
+
+ {% block content %}
+   <main style="height: 400px;"> 
+          <p style="text-align: center;">your output is <b>{{out}}</b></p>
+          <img src="{% static 'right.png' %}" alt="image" width="150" height="150" style="margin-left: 690px;">
+          <h1 style="text-align: center;">Thank You for Submiting</h1>
+    </main>
+ {% endblock %}

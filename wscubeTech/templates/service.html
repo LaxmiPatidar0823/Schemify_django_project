@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+ {% block content %}
+ <main style="height: 700px;">
+
+  
+
+    <h1 style="text-align: center;">Service Us </h1>
+    <p style="margin-left: 100px; margin-right: 100px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat tempora dolorum voluptas quia minus esse assumenda fuga, cumque blanditiis tenetur laborum possimus aliquam veritatis autem. Temporibus dolorem facere laudantium unde inventore. Aut non, eius saepe nisi ipsa veniam adipisci est quibusdam quas expedita error placeat reprehenderit accusantium doloremque, iste hic. Vel voluptate repudiandae ullam neque eveniet nemo corrupti repellat impedit. Itaque, dicta neque? Asperiores cum quod tempore veniam est officiis temporibus, iure recusandae repellendus cumque illo ipsam nobis eveniet omnis ipsum optio praesentium, incidunt culpa reprehenderit rerum placeat alias beatae ducimus nemo. Perferendis esse odit voluptatum dolore? Quasi, cum laboriosam?</p>
+    <img src="{% static 'service.webp' %}" alt="image" style="margin-left: 600px;">
+    <table border="1" class="table table-striped">
+        <th>Service_icon</th>
+        <th>Service_title</th>
+        <th>Service_des</th>
+   
+    {% for a in serviceData %}
+     <tr>
+        <td>{{a.service_icon}}</td>
+        <td>{{a.service_title}}</td>
+        <td>{{a.service_des}}</td>             
+        <!-- <td>{{a.service_des | safe}}</td>     -->         
+        <!-- <td>{{a.service_des | lower}}</td>     -->
+        <!-- <td>{{a.service_des | upper | safe}}</td>     -->
+        <!-- <td>{{a.service_des | first | safe}}</td>     -->
+        <!-- <td>{{a.service_des | capfirst | safe}}</td>     -->
+        <!-- <td>{{a.service_des | wordcount | safe}}</td>     -->
+        <!-- <td>{{a.service_des | length | safe}}</td>     -->
+        <!-- <td>{{a.service_des | slice:"0:3" | safe}}</td>     -->
+
+        <!-- safe filter use hote html tage ke liye, lower text  ko lowerLetter me , upper uper letter me convert krta h , first firstLetter deta h, capfirst first letter ko caapital kr deta h, wordcount  integer value deta h kitne word h -->
+     </tr>
+    {% endfor %}
+
+</table>
+</main>
+{% endblock %}
